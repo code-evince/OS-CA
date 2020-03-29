@@ -1,21 +1,18 @@
 //*******************************************************************************************************************************************************************************************************
-//                                                  VARIABLE TIME QUANTUM ROUND ROBIN ALGORITH
+//                                        VARIABLE TIME QUANTUM ROUND ROBIN ALGORITH
 //*******************************************************************************************************************************************************************************************************
-
-
 //the following algorithm is a  modified version of the round robin with variable time quantum
-
 
 
 #include<stdio.h> 
 #include<conio.h>
 
 
-void rr(int no,int remt[10],int Cur_t,int arT[10], int bsT[10]);
+void final(int no,int remt[10],int Cur_t,int arT[10], int bsT[10]);
 
 
 
-void rr(int no,int remt[10],int Cur_t,int arT[10], int bsT[10]){
+void final(int no,int remt[10],int Cur_t,int arT[10], int bsT[10]){
 	
 	float avg_wait,avg_tut;
     int i,j,n=no,temp,btime[20],Proc_no[20],w_time[20],tut_t[20],total=0,loc;
@@ -137,7 +134,7 @@ main()
 		}
 	}
 	
-	rr(no,remt,CurT,arT,bsT);
+	final(no,remt,CurT,arT,bsT);
 	
 	return 0;
 }
