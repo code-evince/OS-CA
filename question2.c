@@ -1,5 +1,5 @@
 //*******************************************************************************************************************************************************************************************************
-//                                        VARIABLE TIME QUANTUM ROUND ROBIN ALGORITH
+//                                            VARIABLE TIME QUANTUM ROUND ROBIN ALGORITH
 //*******************************************************************************************************************************************************************************************************
 //the following algorithm is a  modified version of the round robin with variable time quantum
 
@@ -17,7 +17,7 @@ void final(int no,int remt[10],int Cur_t,int arT[10], int bsT[10]){
 	float avg_wait,avg_tut;
     int i,j,n=no,temp,btime[20],Proc_no[20],w_time[20],tut_t[20],total=0,loc;
     
-    printf("Third round with least burst time.\n");
+    printf("Third round process with greater remaining time first.\n");
     
     for(i=0;i<n;i++)
     {
@@ -72,9 +72,21 @@ main()
 	indicator = 0;
 	wait = 0;
 	tut = 0;
-	printf("Enter number of processes "); 
+	printf("\n");
+	printf(" **********************  Welcome to the Scheduler  ***********************");
+	printf("\n");
+	printf(" Enter Number of Processes :  "); 
 	scanf("%d",&no);
 	RemProc = no;
+	
+	if (no==0)
+	{
+	printf("\n");
+	printf("\n");
+	printf("!!!!!!!!!!!!!!!   PLEASE PROVIDE ATLEAST ONE PROCESS  !!!!!!!!!!!!!!!\n");
+	printf("\n");
+	printf("\n");
+	}
 	
 	printf("\nEnter the arrival time and burst time of the processes\n");
 	for(Proc_no = 0;Proc_no < no;Proc_no++) 
@@ -138,4 +150,3 @@ main()
 	
 	return 0;
 }
-
