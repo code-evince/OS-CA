@@ -1,5 +1,5 @@
 //*******************************************************************************************************************************************************************************************************
-//                                            VARIABLE TIME QUANTUM ROUND ROBIN ALGORITH
+//                                       VARIABLE TIME QUANTUM ROUND ROBIN ALGORITH
 //*******************************************************************************************************************************************************************************************************
 //the following algorithm is a  modified version of the round robin with variable time quantum
 
@@ -53,12 +53,12 @@ void final(int no,int remt[10],int Cur_t,int arT[10], int bsT[10]){
  
     avg_wait=(float)total/n;
     total=0;
-    printf("\nProcess\t\tBurst time\t\twaiting time\t\tTurnaround Time");
+    printf("\nProcess\t\twaiting time\t\tTurnaround Time");
     for(i=0;i<n;i++)
     {
         tut_t[i]=btime[i]+w_time[i];
         total=total + tut_t[i];
-        printf("\nP%d\t\t\t%d\t\t\t%d\t\t\t%d",Proc_no[i],btime[i],w_time[i],tut_t[i]);
+        printf("\nP%d\t\t%d\t\t\t%d",Proc_no[i],w_time[i],tut_t[i]);
     }
     avg_tut=(float)total/n;
     printf("\n\nAverage waiting time = %f",avg_wait);
